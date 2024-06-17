@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>AES Encryption/Decryption</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"
+      integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="../CSS/AES.css">
+
+
+</head>
+
+<body>
+   <header>
+      <nav style="font-size: 1rem;">
+         <a href="timeline.html">Timeline</a>
+         <a href="ImageAES.html">Image</a>
+         <a href="../index.html">Home</a>
+         <a href="caeser.html">Caesar</a>
+         <a href="steno.html">Image Encoding</a>
+      </nav>
+   </header>
+   <h1>AES Encryption/Decryption</h1>
+
+   <div id="ec">
+      <div class="input-container">
+         <label for="message">Data to Encrypt: </label>
+         <input type="text" id="message" placeholder="Enter your message" />
+      </div>
+      <div class="input-container">
+         <label for="p">Enter the Password: </label>
+         <input type="text" id="p" placeholder="Enter the  password" />
+      </div>
+      <button id="encrypt" onclick="encryptMessage()">Encrypt</button>
+      <div class="input-container">
+         <label for="encrypted-message">Encrypted Message:</label>
+         <p id="encrypted-message">Your Encrypted Message will appear here...</p>
+      </div>
+   </div>
+<div class="spacer">
+<br><br>
+</div>
+   <div id="dec">
+      <div class="input-container">
+         <label for="message">Data to Decrypt: </label>
+         <input type="text" id="decm" placeholder="Enter your Encrypted Data" />
+      </div>
+      <div class="input-container">
+         <label for="p">Enter the Password: </label>
+         <input type="text" id="decp" placeholder="Enter the  password" />
+      </div>
+      <button id="decrypt" onclick="decryptMessage()">Decrypt</button>
+      <div class="input-container">
+         <label for="decrypted-message">Decrypted Message:</label>
+         <p id="decrypted-message">Your Decrypted Message will appear here...</p>
+      </div>
+   </div>
+   <script src="../JS/AES.js"></script>
+</body>
+
+</html>
